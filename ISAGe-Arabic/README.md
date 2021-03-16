@@ -63,6 +63,7 @@ https://docs.moodle.org/37/en/Short-Answer_question_type
 1. The folder "Requirements" includes files data(the trained model, semantic space, Word Embeddings, words-dictionary,stop words, Min-Max dictionary(TFlog Wheights))
 
 2. Copy the content of the folder "requierement Arabic" (in the link bolow) in the "requirements" folder of the plugin:
+3. https://drive.google.com/drive/folders/1KPZCvXvQ6VeK54fhkOpNxkUC3PQlPTXp?usp=sharing
 
 4. Introduce (question, student answer, reference answer and difficulty) to the getScore function as in the example in the main function. 
 
