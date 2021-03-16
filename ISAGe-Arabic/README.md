@@ -92,9 +92,7 @@ ModelAnswers=[Model1,Model2 , ... ]
  - The external grader code and data requirements must be uploaded on the server (here pythonanywhere)
 
 - A PHP cURL script is used to connect the plugin to the Flask API which deploys the grader on PythonanyWhere(already done in the plugin).
-(Please see the "question.php" of the plugin in the section commented: // Call the grader )
-
-
+(Please see the "question.php" of the plugin in the section commented: // Call the grader ).
 ========================
 4. Feedback & Contact (anonymous because under-review)
 ========================
