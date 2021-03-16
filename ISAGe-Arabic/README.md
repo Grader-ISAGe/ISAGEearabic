@@ -24,10 +24,10 @@ CONTENTS
 1. Introduction
 
 The grader is integrated into the online quiz system deployed on Moodle. 
-The Question Engine, the core module of the quiz system, is extended with our new Question Type ISAGe. 
+The Question Engine, the core module of the quiz system, is extended with our new Question Type ISAGearabic. 
 The grader architecture highlights two modules: 
 • The ISAGe Question Type Plugin which extends the Question Engine of the quiz system to our new question type. 
-The plugin controls the communication flow with the other modules of the quiz system and inherits the question behavior, question bank, quiz reports, …   from the e-learning system. 
+The plugin controls the communication flow with the other modules of the quiz system and inherits the question behavior, question bank, quiz reports, … from the e-learning system. 
 • The external grader that is deployed on the Cloud. It implements the trained model to predict grades.
   
 Actually, the Grader is used on our Moodle University Plateform in formative and summative tasks using open short answers. 
@@ -42,7 +42,7 @@ Actually, the Grader is used on our Moodle University Plateform in formative and
 =====
 2.a. The Moodle Plugin  V1 (ISAGEearabic) 
 
-This is our new Moodle Plugin using  Moodle question type template. We extend  the Moodle question engine to a ISAGEarabic to grade Arabic short answers scoring using NLP computation and supervised learning.  
+This is our new Moodle Plugin using  Moodle question type template. We extend  the Moodle question engine to ISAGEarabic to grade Arabic short answers scoring using NLP computation and supervised learning.  
 
 * Please see here for more information about : Moodle-Short Answer Question Type :
 https://docs.moodle.org/37/en/Short-Answer_question_type
@@ -74,17 +74,29 @@ AllQuestionCorpus=[[response1Question1,response2Question1,...],[response1Questio
 ModelAnswers=[Model1,Model2 , ... ]
 
 =======================
-3. How to deploy the plugin ?
+3. How to deploy the the grader into the e-learning environment?
+
+- The Web gateway to the clients is provided by the API framework which permits hosting the grader on the Cloud.  
+  We use the Flask Framework to do it.  
+  The Control and View component is handled by HTTP requests from the client-side (the e-learning system), to the server (Hosting Cloud).   
+  The Integrated Development Environment (EDI) is used as “PaaS” (Platform as a Service) where the ISAGe runs as “a service” separately. 
+  The two modules(code grader(in Python) and the plugin(developped in PHP) communicate through a cURL interface.
+  cURL is a command-line tool for getting or sending data using URL syntax. 
+  cURL supports HTTPS to transmit students’ answers and reference answers to the external grader; 
+  then it asynchronously waits for grades from the grader and returns them to the LMS quiz system.
 
 - The Plugin must be installed on a Moodle plateform  to be used:
 (Install the ISAGEearabic.zip)
   (Dashboard / Site administration / Plugins / Install plugins). 
+  
+ - The external grader code and data requirements must be uploaded on the server (here pythonanywhere)
 
 - A PHP cURL script is used to connect the plugin to the Flask API which deploys the grader on PythonanyWhere(already done in the plugin).
-(see: question.php in the section : // Call the grader )
+(Please see the "question.php" of the plugin in the section commented: // Call the grader )
+
 
 ========================
-4. Feedback / Contact (anonymous because under-review)
+4. Feedback & Contact (anonymous because under-review)
 ========================
 6. Acknowledgments 
  
