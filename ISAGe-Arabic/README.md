@@ -42,12 +42,13 @@ Actually, the Grader is used on our Moodle University Plateform in formative and
 =====
 2.a. The Moodle Plugin  V1 (ISAGEearabic) 
 
-This is our Moodle Plugin using  Moodle question type template  and adapted to grade Arabic short answers scoring using NLP computation and supervised learning.  
+This is our new Moodle Plugin using  Moodle question type template. We extend  the Moodle question engine to a ISAGEarabic to grade Arabic short answers scoring using NLP computation and supervised learning.  
 
-* Please see here for more information about : Moodle-Short Answer Question Type : 
+* Please see here for more information about : Moodle-Short Answer Question Type :
 https://docs.moodle.org/37/en/Short-Answer_question_type
 
 =========================
+
 2.b. Grader code on Distant server /
 
 - The grader function is deployed on a distant server (Pythonanywhere).   
