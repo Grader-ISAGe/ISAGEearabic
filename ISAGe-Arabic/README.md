@@ -96,7 +96,7 @@ ModelAnswers=[Model1,Model2 , ... ]
 (Please see the "question.php" of the plugin in the section commented: // Call the grader ).
 ========================
 
-4. Feedback & Contact (anonymous because under-review)
+4. Feedback & Contact :  
 ========================
-6. Acknowledgments 
+6. Acknowledgments :  
  
